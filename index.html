@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <title>Lega Pro Santa B</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<header>
+    <nav class="navbar title-bar float-center p-0">
+        <div class="container title-container p-0 ">
+            <row class="w-100">
+                <img class="title-logo" src="imgs/logo.png" alt="">
+            </row>
+        </div>
+    </nav>
+</header>
+
+<body class="bg-col page-settings">
+
+    <div class="accordion accordion-flush text-center" id="accordionFlushLeague">
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h1">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c1" aria-expanded="false" aria-controls="flush-c1">
+                    <b class="fp-acc-header fp-acc-text" style="text-transform: uppercase;">la lega</b>
+                </button>
+            </h2>
+            <div id="flush-c1" class="accordion-collapse collapse" aria-labelledby="flush-h1"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li>
+                            La Lega pro Santa B è composta da dieci squadre ed è governata dall’Assemblea di Lega,
+                            costituita da tutti i partecipanti.
+                        </li>
+                        <li>
+                            Le modifiche alle regole sono stabilite dall’Assemblea di Lega con voto a maggioranza
+                            semplice prima dell’asta iniziale.</li>
+                        <li> Le riunioni ufficiali di Lega sono:<br>
+                            <div class="text-left">- Assemblea di Lega pre-Campionato, durante la quale si decide la
+                                data dell'asta iniziale e si rettifica il regolamento.<br>- Asta iniziale
+                                <br> - Asta di riparazione (al termine del mercato estivo)
+                                <br> - Asta di riparazione (al termine del mercato invernale)</div>
+                        </li>
+                        <li class="simple_text">
+                            Le aste di riparazione possono svolgersi per via telematica.
+                        </li>
+                        <li class="simple_text">
+                            I partecipanti hanno l’obbligo di portare a termine le manifestazioni alle quali si
+                            iscrivono.
+                        </li>
+                        <li class="simple_text">
+                            Nel caso in cui un partecipante si ritiri dal campionato o da un’altra manifestazione
+                            ufficiale di Lega, egli sarà sanzionato con 50 euro di multa. La formazione del partecipante
+                            ritiratosi sarà inserita da un altro partecipante che ogni giornata sarà
+                            eletto per sorteggio.
+                        </li>
+                        <li class="simple_text">
+                            Qualsiasi reclamo dovrà pervenire all’Assemblea di Lega tramite il gruppo ufficiale Whatsapp
+                            “Lega pro Santa B” e sarà risolto attenendosi alle regole contenute in questo documento.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h2">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c2" aria-expanded="false" aria-controls="flush-c2">
+                    <b class="fp-acc-header fp-acc-text">LE SQUADRE</b>
+                </button>
+            </h2>
+            <div id="flush-c2" class="accordion-collapse collapse" aria-labelledby="flush-h2"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Il nome di ciascuna squadra è stabilito dal rispettivo partecipante e non potrà essere
+                            modificato durante il campionato.
+                        </li>
+                        <li class="simple_text">
+                            Ciascuna squadra dispone per l’asta iniziale di 600 crediti, che dovrà spendere per
+                            acquistare calciatori o effettuare scambi con altre squadre. A questi saranno aggiunti,
+                            all’asta di riparazione invernale 25 crediti.
+                        </li>
+                        <li class="simple_text">
+                            La rosa di ciascuna squadra deve essere composta da 24 calciatori, tra cui:<br> - 3 portieri
+                            <br> - 8 difensori <br> - 8 centrocampisti<br> - 5 attaccanti<br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h3">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c3" aria-expanded="false" aria-controls="flush-c3">
+                    <b class="fp-acc-header fp-acc-text">L'ASTA INIZIALE</b>
+                </button>
+            </h2>
+            <div id="flush-c3" class="accordion-collapse collapse" aria-labelledby="flush-h3"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            All’asta iniziale devono essere presenti tutti i partecipanti della Lega. In caso di
+                            indisponibilità di un partecipante, questi può nominare un rappresentante in sua vece.
+                        </li>
+                        <li class="simple_text">
+                            Ciascuna squadra deve acquistare 24 calciatori divisi per ruolo a un costo totale non
+                            superiore a 600 crediti. Per la definizione dei ruoli, la Lega decide di attenersi agli
+                            elenchi ufficiali pubblicati su Fantacalcio.it
+                        </li>
+                        <li class="simple_text">
+                            Una squadra non è obbligata a spendere tutti i crediti a disposizione; i crediti rimanenti
+                            potranno essere utilizzati per le aste di riparazione successive.
+                        </li>
+                        <li class="simple_text">
+                            Alla nomina di un calciatore, il primo allenatore che vorrà acquistarlo farà la sua offerta
+                            d’asta. Le offerte successive dovranno incrementare quantomeno l’offerta minima consentita.
+                            L’asta per ciascun calciatore proseguirà finché non resterà un solo
+                            offerente, il quale acquisterà quel calciatore per la cifra offerta.
+                        </li>
+                        <li class="simple_text">
+                            Lo svolgimento dell’asta è coordinato da un membro dell’Assemblea di Lega, che gestisce i
+                            tempi e comunica ai giocatori la spesa progressiva.
+                        </li>
+                        <li class="simple_text">
+                            L’asta sarà effettuata tramite il software FantAsta di Fantacalcio.it, secondo cui i
+                            calciatori saranno chiamati in ordine casuale per ciascun ruolo. </li>
+                        <li class="simple_text">
+                            Non è previsto l’acquisto del pacchetto portieri, dunque il secondo ed il terzo portiere di
+                            una squadra non verranno assegnati automaticamente al partecipante che acquisterà il primo
+                            portiere.
+                        </li>
+                        <li class="simple_text">
+                            È vietato prendere accordi tra partecipanti sull’acquisto dei calciatori.
+                        </li>
+                        <li class="simple_text">
+                            Un membro dell’Assemblea registra le rose complete e i crediti rimasti di ciascun
+                            partecipante sull’applicazione “Fantacalcio Leghe”.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h4">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c4" aria-expanded="false" aria-controls="flush-c4">
+                    <b class="fp-acc-header fp-acc-text">LE ASTE DI RIPARAZIONE</b>
+                </button>
+            </h2>
+            <div id="flush-c4" class="accordion-collapse collapse" aria-labelledby="flush-h4"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Le aste di riparazione prevedono l’acquisto e lo svincolo di calciatori.
+                        </li>
+                        <li class="simple_text">
+                            Sono consentite due sessioni di mercato di riparazione:<br> - Asta di riparazione estiva
+                            (Settembre/Ottobre)
+                            <br> - Asta di riparazione invernale (Gennaio) <br>
+                        </li>
+                        <li class="simple_text">
+                            Durante l’asta di riparazione estiva, ogni squadra potrà utilizzare i crediti rimasti al
+                            termine dell’asta iniziale.
+                        </li>
+                        </li>
+                        <li class="simple_text">
+                            Durante l’asta di riparazione invernale, ogni partecipante avrà a disposizione 25 crediti e
+                            gli eventuali crediti rimanenti dalle aste precedenti.
+                        </li>
+                        <li class="simple_text">
+                            L'asta si svolgerà a chiamata, partendo dal partecipante in peggior posizione di classifica
+                            e rispetterà le stesse regole seguite per l’asta iniziale.
+                        </li>
+                        <li class="simple_text">
+                            Ogni squadra può effettuare quattro acquisti (svincoli) durante l’asta di riparazione
+                            estiva.
+                        </li>
+                        <li class="simple_text">
+                            Ogni squadra può effettuare quattro acquisti (svincoli) durante l’asta di riparazione
+                            invernale.
+                        </li>
+                        <li class="simple_text">
+                            Ogni partecipante potrà svincolare i propri calciatori ad un prezzo pari al valore attuale
+                            riportato sull’elenco.
+                        </li>
+                        <li class="simple_text">
+                            I trasferimenti di calciatori in un'altra serie sono da considerarsi svincoli aggiuntivi e
+                            il partecipante riceverà un indennizzo pari al valore attuale del calciatore.
+                        </li>
+                        <li class="simple_text">
+                            Se un calciatore è ceduto in un'altra serie o passa a miglior vita durante il lasso di tempo
+                            compreso tra l’asta iniziale e il mercato di riparazione estivo, il partecipante riceverà un
+                            indennizzo corrispondente all’ 80 % del valore di acquisto.
+                        </li>
+                        <li class="simple_text">
+                            I calciatori svincolati non potranno essere acquistati al di fuori delle due sessioni di
+                            mercato, eccetto se si debba necessariamente sostituire un calciatore per trasferimento in
+                            un’altra serie o morte. In questo caso il partecipante riceverà un indennizzo
+                            pari al valore attuale del calciatore riportato sulla lista.
+                        </li>
+                        <li class="simple_text">
+                            Un calciatore appena svincolato da una squadra non potrà essere riacquistato dalla stessa.
+                        </li>
+                        <li class="simple_text">
+                            Alla fine di ogni operazione di mercato, l’Assemblea di Lega si assicura che ogni
+                            partecipante non abbia speso più dei crediti disponibili (accappottamento), pena lo svincolo
+                            obbligato del calciatore il cui valore d’acquisto risulti maggiore.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h5">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c5" aria-expanded="false" aria-controls="flush-c5">
+                    <b class="fp-acc-header fp-acc-text">GLI SCAMBI</b>
+                </button>
+            </h2>
+            <div id="flush-c5" class="accordion-collapse collapse" aria-labelledby="flush-h5"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            E’ possibile scambiare giocatori tra squadre o vendere giocatori ad altre squadre in cambio
+                            di crediti. </li>
+                        <li class="simple_text">
+                            Gli scambi sono permessi dal giorno dell’asta iniziale fino alla trentesima giornata di
+                            campionato, così da non compromettere le fasi finali del campionato e della coppa di Lega.
+                        </li>
+                        <li class="simple_text">
+                            Non sono consentiti gli scambi nel giorno utile allo schieramento delle formazioni, in cui
+                            ha inizio la giornata di campionato. </li>
+                        </li>
+                        <li class="simple_text">
+                            I calciatori scambiati possono essere schierati dalla prossima giornata disponibile.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h6">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c6" aria-expanded="false" aria-controls="flush-c6">
+                    <b class="fp-acc-header fp-acc-text">LA FORMAZIONE</b>
+                </button>
+            </h2>
+            <div id="flush-c6" class="accordion-collapse collapse" aria-labelledby="flush-h6"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Le formazioni possono essere schierate nei seguenti moduli:<br> - 343<br> - 352<br> - 451
+                            <br> - 442<br> - 433<br> - 532<br> - 541<br>
+                        </li>
+                        <li class="simple_text">
+                            I partecipanti hanno l’obbligo di inserire la propria formazione entro il termine ultimo per
+                            la consegna, ovvero 15 minuti prima dell’inizio delle partite.
+                        </li>
+                        <li class="simple_text">
+                            Nel caso in cui il partecipante non inserisca la formazione entro il termine indicato sarà
+                            considerata valida agli effetti del risultato la formazione della settimana precedente.
+                        </li>
+                        <li class="simple_text">
+                            Se il partecipante non inserisce la formazione entro il termine indicato per due volte, sarà
+                            sanzionato con 5 euro di multa e sarà penalizzato di un punto in classifica. La formazione
+                            sarà recuperata dal sistema.
+                        </li>
+                        <li class="simple_text">
+                            Se il partecipante è recidivo, e dunque non inserisce la formazione entro il termine
+                            indicato per piú di due volte sarà penalizzato di un punto in classifica e sanzionato con
+                            una multa di 10 euro. La formazione sarà recuperata dal sistema.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h7">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c7" aria-expanded="false" aria-controls="flush-c7">
+                    <b class="fp-acc-header fp-acc-text">LE RISERVE E LE SOSTITUZIONI</b>
+                </button>
+            </h2>
+            <div id="flush-c7" class="accordion-collapse collapse" aria-labelledby="flush-h7"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Ciascun partecipante dovrà inserire la panchina, composta da un numero massimo di 13
+                            panchinari.
+                        </li>
+                        <li class="simple_text">
+                            I panchinari dovranno essere numerati in ordine di ingresso e possono sostituire soltanto
+                            calciatori che non siano scesi in campo o che siano stati giudicati senza voto.
+                        </li>
+                        <li class="simple_text">
+                            Ciascuna squadra non potrà effettuare più di tre sostituzioni per gara, indipendentemente
+                            dal ruolo.
+                        </li>
+                        <li class="simple_text">
+                            In ogni caso, se una squadra mancherà di più di tre titolari al momento della valutazione,
+                            giocherà in inferiorità numerica.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h8">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c8" aria-expanded="false" aria-controls="flush-c8">
+                    <b class="fp-acc-header fp-acc-text" style="text-transform: uppercase;">LE MODALITà di calcolo</b>
+                </button>
+            </h2>
+            <div id="flush-c8" class="accordion-collapse collapse" aria-labelledby="flush-h8"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Il quotidiano ufficiale (Fantacalcio.it) è l’unico ed insindacabile riferimento della Lega.
+                        </li>
+                        <li class="simple_text">
+                            I Punti-gol sono stabiliti nella seguente misura:<br> - +3 punti per ogni gol realizzato;
+                            <br> - +3 punti per ogni rigore parato; <br> - -2 punti per ogni autogol; <br> - -3 punti
+                            per un rigore sbagliato; <br> - -1 punto per ciascun gol subito.<br>
+                        </li>
+                        <li class="simple_text">
+                            Nel caso che un calciatore di movimento sostituisca il portiere, egli ne assumerà
+                            interamente il ruolo, con tutto quello che ne consegue dal punto di vista regolamentare.
+                        </li>
+                        <li class="simple_text">
+                            La dizione ‘rigore parato’ è da intendersi in senso letterale. Il rigore calciato contro un
+                            legno o fuori della porta viene contato (ovviamente in negativo) soltanto al calciatore che
+                            lo ha tirato, cioè non viene assegnato alcun punto al portiere.
+                        </li>
+                        <li class="simple_text">
+                            I punti-cartellino sono stabiliti nella seguente misura: <br> - -0,5 per un’ammonizione;
+                            <br> - - 1 punto per un’espulsione. <br>
+
+                        </li>
+                        <li class="simple_text">
+                            I Punti assist valgono 1 punto per ogni assist eseguito.
+                        </li>
+                        <li class="simple_text">
+                            Modificatore Difesa:<br> La squadra ha diritto a un bonus da sommare al proprio
+                            Totale-Squadra nel caso la media voto del portiere e di tre difensori schierati, senza
+                            considerare i bonus/malus, sia maggiore o uguale a 6.00,
+                            a partire da una difesa a quattro. Il bonus sarà di:<br> - +1 se la media sarà compresa tra
+                            6.00 e 6.49 <br> - +3 se la media sarà compresa tra 6.50 e 6.99 <br> - +6 se la media sarà
+                            compresa tra 7.00 e 7,49<br> - + 9 se la
+                            media sarà maggiora o uguale di 7,5 <br>
+                        </li>
+                        <li class="simple_text">
+                            Confronto dei Totali-Squadra:<br> Per determinare il Risultato Finale della gara vengono
+                            confrontati i Totali-Squadra delle due squadre in base alla Tabella di Conversione.<br> - da
+                            66 a 71,5 punti = 1 gol<br> - da 72 a 75,5
+                            punti = 2 gol<br> - da 76 a 79,5 punti = 3 gol<br> - da 80 a 83,5 punti = 4 gol<br> - da 84
+                            a 87,5 punti = 5 gol<br> - da 88 a 91,5 punti = 6 gol<br> - da 92 a 95,5 punti = 7 gol<br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h9">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c9" aria-expanded="false" aria-controls="flush-c9">
+                    <b class="fp-acc-header fp-acc-text">LE PARTITE POSTICIPATE</b>
+                </button>
+            </h2>
+            <div id="flush-c9" class="accordion-collapse collapse" aria-labelledby="flush-h9"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Nel caso in cui una o più partite vengano posticipate per qualsiasi motivo rispetto alla
+                            data originariamente stabilita dalla Lega Calcio, a tutti i giocatori appartenenti alle rose
+                            delle squadre di Serie A coinvolte nelle partite posticipate verrà assegnato
+                            un 6 d’ufficio per i giocatori di movimento ed un 5 per il portiere. Se le partite saranno
+                            disputate entro 48 ore, si attenderanno i recuperi.
+                        </li>
+                        <li class="simple_text">
+                            Se le partite sono posticipate in una giornata durante la quale si disputano le partite di
+                            coppa di lega ed i recuperi sono previsti in data posteriore al turno successivo della
+                            stessa manifestazione, a tutti i giocatori appartenenti alle rose delle squadre
+                            di Serie A coinvolte nelle partite posticipate verrà assegnato un 6 d’ufficio per i
+                            giocatori di movimento ed un 5 per il portiere.
+                        </li>
+                        <li class="simple_text">
+                            Nel caso in cui un’intera giornata di campionato venga posticipata, si attenderanno i
+                            recuperi.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h10">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c10" aria-expanded="false" aria-controls="flush-c10">
+                    <b class="fp-acc-header fp-acc-text">IL CAMPIONATO E LA CLASSIFICA</b>
+                </button>
+            </h2>
+            <div id="flush-c10" class="accordion-collapse collapse" aria-labelledby="flush-h10"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            L’Assemblea di Lega provvede alla formazione del calendario degli incontri di campionato,
+                            tramite sorteggio, durante il giorno dell’asta iniziale.
+                        </li>
+                        <li class="simple_text">
+                            La classifica è stabilita per punteggio, con assegnazione di tre punti per la gara vinta, un
+                            punto per la gara pareggiata e zero punti per la gara perduta.
+                        </li>
+                        <li class="simple_text">
+                            La squadra prima classificata è proclamata vincitrice del Campionato ed acquisisce il titolo
+                            di Campione di Lega. Al termine del Campionato, in caso di parità di punteggio tra due o più
+                            squadre, si procede alla determinazione della squadra Campione e
+                            del podio in base alla seguente disposizione:<br> - In caso di parità di punteggio tra due o
+                            più squadre, il titolo di Campione di Lega è assegnato alla squadra che ha totalizzato più
+                            punti squadra.
+                            <br> - In caso di parità di punti squadra, varranno gli scontri diretti<br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h11">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c11" aria-expanded="false" aria-controls="flush-c11">
+                    <b class="fp-acc-header fp-acc-text">LA COPPA DI LEGA</b>
+                </button>
+            </h2>
+            <div id="flush-c11" class="accordion-collapse collapse" aria-labelledby="flush-h11"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            La Coppa di Lega è un torneo costituito da tre fasi: <br> - Prima fase: gironi con gare
+                            singole. Le prime due classificate di ogni girone si qualificano alla seconda fase. <br> -
+                            Seconda fase: semifinali (prima girone A contro
+                            seconda girone B e prima girone B contro seconda girone A) con gare di andata e ritorno.<br>
+                            - Terza fase: finale con gara unica.
+
+                        </li>
+                        <li class="simple_text">
+                            La Coppa si disputa ogni tre giornate di campionato, in concomitanza con la giornata di
+                            campionato stessa.
+                        </li>
+                        <li class="simple_text">
+                            Gli abbinamenti del primo turno vengono determinati tramite sorteggio.
+                        </li>
+                        <li class="simple_text">
+                            Il passaggio alla seconda fase viene determinato in base alla classifica ottenuta al termine
+                            della prima fase. In caso di parità di punti, sarà promossa la squadra che ha totalizzato
+                            più punti squadra. In caso di parità di punti squadra, si considereranno
+                            gli scontri diretti.
+                        </li>
+                        <li class="simple_text">
+                            In caso di parità nel passaggio alla fase finale, non si terrà conto del fattore campo, ma
+                            sarà promossa la squadra che avrà totalizzato più punti squadra durante le due partite.
+                        </li>
+                        <li class="simple_text">
+                            Nella fase finale, in caso di parità, vincerà il torneo la squadra che avrà totalizzato più
+                            punti squadra durante la partita.
+                        </li>
+                        <li class="simple_text">
+                            Per le partite di Coppa di Lega valgono le disposizioni riportate nelle regole precedenti.
+                        </li>
+                        <li class="simple_text">
+                            È permesso utilizzare una formazione diversa da quella schierata in campionato.
+                        </li>
+                        <li class="simple_text">
+                            È possibile che due squadre si incrocino contemporaneamente sia in campionato che in coppa.
+                        </li>
+                        <li class="simple_text">
+                            Il calendario di coppa sarà così organizzato:<br> - Dalla terza alla trentesima giornata di
+                            campionato avranno luogo le partite dei gironi.
+                            <br> - La trentunesima e la trentaduesima giornata di campionato saranno dedicate alle
+                            semifinali.
+                            <br> - Nella trentatreesima giornata di campionato si disputerà la finale di coppa.<br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item fp-acc-item">
+            <h2 class="accordion-header" id="flush-h12">
+                <button class="accordion-button collapsed fp-acc-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-c12" aria-expanded="false" aria-controls="flush-c12">
+                    <b class="fp-acc-header fp-acc-text">I PREMI E LE QUOTE DI PARTECIPAZIONE</b>
+                </button>
+            </h2>
+            <div id="flush-c12" class="accordion-collapse collapse" aria-labelledby="flush-h12"
+                data-bs-parent="#accordionFlushLeague">
+                <div class="accordion-body fp-acc-text">
+                    <ul class="text-left">
+                        <li class="simple_text">
+                            Ogni squadra, per partecipare alle manifestazioni ufficiali della Lega, è tenuta a versare
+                            la quota di 100,00 euro a stagione, che potrà pagare a rate nel corso della stagione entro
+                            l’estate.
+                        </li>
+                        <li class="simple_text">
+                            Il montepremi del campionato sarà così suddiviso:<br> - 1° classificato: 600 euro<br> - 2°
+                            classificato: 200 euro<br> - 3° classificato: 100 euro<br>
+
+                        </li>
+                        <li class="simple_text">
+                            Il vincitore della coppa di Lega riceverà un premio di 100,00 euro
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container title-container footer text-right">
+        <div class="w-100 row">
+            <div class="col-11" style="padding-right: 0; padding-top: 5px;">
+                <div class="row" style="width: 100%; justify-content: right;">
+                    <h4 class="d-inline footer-text">Angelo Panniello</h4>
+                </div>
+                <div class="row" style="width: 100%; justify-content: right;">
+                    <h4 class="d-inline footer-text">2023</h4>
+                </div>
+            </div>
+            <div class="col-1" style="padding: 0;">
+                <img class="footer-img d-inline" src='imgs/me.png' onmouseover="this.src='imgs/mefill.png';"
+                    onmouseout="this.src='imgs/me.png';" />
+                <!-- <img class="footer-img d-inline" src="imgs/me.png" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

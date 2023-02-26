@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "fp-font";
+    src: url("fonts/TitilliumWeb-Regular.woff") format("woff");
+}
+
+:root {
+    --cel: #00336e;
+    --bg-cel: #002652;
+    --oro: #a47f28;
+    --bg-oro: #534014;
+}
+
+.bg-col {
+    background-color: var(--bg-cel);
+}
+
+.title-container {
+    text-align: center;
+}
+
+.page-settings {
+    padding-top: 7rem;
+    padding-left: 0;
+    padding-right: 0;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+.title-bar {
+    background-color: var(--cel);
+    border-bottom: var(--oro) 0.2rem solid;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 5rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.title-logo {
+    padding-top: 0.8rem;
+    height: 100px;
+}
+
+.footer {
+    border-top: var(--oro) 0.2rem solid;
+    width: 100vw;
+    height: 2rem;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 25px;
+}
+
+.footer-img {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    height: 60px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: white;
+    font-family: 'fp-font';
+}
+
+.header {
+    text-align: center;
+    background-color: var(--cel);
+}
+
+.page-rule-link {
+    color: var(--oro);
+}
+
+.simple_text {
+    margin-bottom: 10px;
+}
+
+.accordion-button.collapsed {
+    color: white;
+    background: var(--cel);
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, .125);
+    outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, .125);
+    outline: none;
+}
+
+.fp-acc-item {
+    color: white;
+    font-family: 'fp-font';
+}
+
+.fp-acc-button {
+    background-color: var(--bg-oro);
+    width: 95%;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    box-shadow: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.fp-acc-text {
+    color: white;
+    font-size: 1.3rem;
+    font-family: "fp-font";
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
