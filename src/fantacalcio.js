@@ -41,6 +41,14 @@ async function fetchText(url, options = {}) {
 
   const text = await response.text();
   if (!response.ok) {
+    const diag = {
+      server: response.headers.get('server'),
+      via: response.headers.get('via'),
+      xCache: response.headers.get('x-cache'),
+      contentType: response.headers.get('content-type'),
+      cfRay: response.headers.get('cf-ray')
+    };
+    console.error('UPSTREAM_DIAG', JSON.stringify(diag));
     throw new Error(`${response.status} ${response.statusText} da ${url}: ${text.slice(0, 250)}`);
   }
   return text;
