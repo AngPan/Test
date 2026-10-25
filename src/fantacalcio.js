@@ -109,6 +109,7 @@ export async function getFormationsExcel(matchday) {
     contentType: response.headers.get('content-type'),
     size: buffer.length,
     prefix: buffer.subarray(0, 4).toString('hex'),
+    preview: (response.headers.get('content-type') || '').includes('json') ? buffer.toString('utf8').slice(0, 500) : '',
     buffer
   };
 }
