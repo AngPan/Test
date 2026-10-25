@@ -26,7 +26,10 @@ function authHeaders({ legacy = false } = {}) {
   if (legacy) {
     headers.Referer = `https://leghe.fantacalcio.it/${config.leagueAlias}/view/competition/${config.competitionId}/dashboard`;
     headers['X-Requested-With'] = 'XMLHttpRequest';
-    if (config.cookie) headers.Cookie = config.cookie;
+    if (config.cookie) {
+      const rawCookie = String(config.cookie).trim();
+      headers.Cookie = rawCookie.includes('=') ? rawCookie : `FCLeague=${rawCookie}`;
+    }
   }
 
   return headers;
