@@ -22,8 +22,7 @@ app.get('/api/live-standings', async (_req, res) => {
   } catch (error) {
     console.error(error);
     res.status(502).json({
-      error: 'Impossibile aggiornare la classifica live.',
-      detail: error instanceof Error ? error.message : String(error)
+      error: 'Classifica live temporaneamente non disponibile.'
     });
   }
 });
