@@ -88,6 +88,31 @@ export async function getTeamLineup({ leagueMatchday, serieAMatchday, homeId, aw
   throw lastError || new Error('Team lineup non disponibile');
 }
 
+export async function getFormationsExcel(matchday) {
+  const params = new URLSearchParams({
+    alias_lega: config.leagueAlias,
+    id_competizione: String(config.competitionId),
+    giornata: String(matchday),
+    nome_competizione: 'Campionato',
+    dummy: '5'
+  });
+  const url = `${LEGACY_BASE}/servizi/V1_LegheFormazioni/excel?${params}`;
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: authHeaders({ legacy: true }),
+    signal: AbortSignal.timeout(12_000)
+  });
+  const buffer = Buffer.from(await response.arrayBuffer());
+  return {
+    ok: response.ok,
+    status: response.status,
+    contentType: response.headers.get('content-type'),
+    size: buffer.length,
+    prefix: buffer.subarray(0, 4).toString('hex'),
+    buffer
+  };
+}
+
 export async function getStandings(throughMatchday) {
   const params = new URLSearchParams({
     alias_lega: config.leagueAlias,
