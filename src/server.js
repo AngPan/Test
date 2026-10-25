@@ -57,6 +57,15 @@ app.get('/api/debug-round', async (_req, res) => {
 
 app.get('/health', (_req, res) => res.json({ ok: true }));
 
-app.listen(config.port, () => {
+app.listen(config.port, async () => {
   console.log(`Scaloni Live: http://localhost:${config.port}`);
+  try {
+    const data = await getRoundLineups({ leagueMatchday: 6, serieAMatchday: 8 });
+    const summary = Array.isArray(data)
+      ? { type: 'array', length: data.length, firstKeys: data[0] && typeof data[0] === 'object' ? Object.keys(data[0]) : [] }
+      : { type: typeof data, keys: data && typeof data === 'object' ? Object.keys(data) : [] };
+    console.log('ROUND_BULK_OK', JSON.stringify(summary));
+  } catch (error) {
+    console.error('ROUND_BULK_FAIL', error instanceof Error ? error.message : String(error));
+  }
 });
