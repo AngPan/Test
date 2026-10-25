@@ -2,6 +2,7 @@ import path from 'node:path';
 import express from 'express';
 import { config } from './config.js';
 import { buildLiveStandings } from './liveStandings.js';
+import { getRoundLineups } from './fantacalcio.js';
 
 const app = express();
 const publicDir = path.join(config.root, 'public');
@@ -24,6 +25,33 @@ app.get('/api/live-standings', async (_req, res) => {
     res.status(502).json({
       error: 'Classifica live temporaneamente non disponibile.'
     });
+  }
+});
+
+app.get('/api/debug-round', async (_req, res) => {
+  try {
+    const data = await getRoundLineups({ leagueMatchday: 6, serieAMatchday: 8 });
+    const summarize = (value) => {
+      if (Array.isArray(value)) {
+        return { type: 'array', length: value.length, firstKeys: value[0] && typeof value[0] === 'object' ? Object.keys(value[0]) : [] };
+      }
+      if (value && typeof value === 'object') {
+        const keys = Object.keys(value);
+        const nested = {};
+        for (const key of keys.slice(0, 10)) {
+          const v = value[key];
+          if (Array.isArray(v)) nested[key] = { type: 'array', length: v.length, firstKeys: v[0] && typeof v[0] === 'object' ? Object.keys(v[0]) : [] };
+          else if (v && typeof v === 'object') nested[key] = { type: 'object', keys: Object.keys(v).slice(0, 20) };
+          else nested[key] = { type: typeof v };
+        }
+        return { type: 'object', keys, nested };
+      }
+      return { type: typeof value };
+    };
+    res.json(summarize(data));
+  } catch (error) {
+    console.error('ROUND_DEBUG_ERROR', error);
+    res.status(502).json({ error: 'round-debug-failed' });
   }
 });
 
