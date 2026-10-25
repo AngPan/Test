@@ -63,6 +63,11 @@ async function fetchJson(url, options = {}) {
   }
 }
 
+export async function getRoundLineups({ leagueMatchday, serieAMatchday }) {
+  const url = `${API_BASE}/gaming/v1/teamLineup/${config.competitionId}/${leagueMatchday}/${serieAMatchday}`;
+  return fetchJson(url);
+}
+
 export async function getCalculationSettings() {
   return fetchJson(`${API_BASE}/onboarding/v1/league/settings/calculate`);
 }
