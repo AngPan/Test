@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#08132c">
   <title>Scaloni League — Classifica Live</title>
   <link rel="stylesheet" href="/styles.css">
@@ -9,15 +10,27 @@
 <body>
   <main class="page-shell">
     <header class="topbar">
-      <div><div class="eyebrow"><span class="live-dot"></span> LIVE</div><h1>Scaloni League</h1><p id="subtitle">Classifica live</p></div>
-      <form action="/logout" method="post"><button class="ghost-button" type="submit">Esci</button></form>
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span> LIVE</div>
+        <h1>Scaloni League</h1>
+        <p id="subtitle">Classifica live</p>
+      </div>
     </header>
+
     <section class="standings-card" aria-live="polite">
       <div class="table-head"><span>#</span><span>Squadra</span><span>Pt</span></div>
-      <div id="standings" class="standings-list"><div class="loading">Aggiornamento classifica…</div></div>
+      <div id="standings" class="standings-list">
+        <div class="loading">Aggiornamento classifica…</div>
+      </div>
     </section>
-    <footer><span id="updated">—</span><span class="separator">•</span><span>chi non ha ancora giocato vale 6</span></footer>
+
+    <footer>
+      <span id="updated">—</span>
+      <span class="separator">•</span>
+      <span>chi non ha ancora giocato vale 6</span>
+    </footer>
   </main>
+
   <script type="module" src="/app.js"></script>
 </body>
 </html>
