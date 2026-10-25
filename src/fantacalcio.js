@@ -57,8 +57,19 @@ export async function getCalculationSettings() {
 }
 
 export async function getTeamLineup({ leagueMatchday, serieAMatchday, homeId, awayId }) {
-  const url = `${API_BASE}/gaming/v1/teamLineup/${config.competitionId}/${leagueMatchday}/${serieAMatchday}/${homeId}/${awayId}/1`;
-  return fetchJson(url);
+  const base = `${API_BASE}/gaming/v1/teamLineup/${config.competitionId}/${leagueMatchday}/${serieAMatchday}/${homeId}/${awayId}`;
+  const candidates = [base, `${base}/1`];
+
+  let lastError;
+  for (const url of candidates) {
+    try {
+      return await fetchJson(url);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error('Team lineup non disponibile');
 }
 
 export async function getStandings(throughMatchday) {
