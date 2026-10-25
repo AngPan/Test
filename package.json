@@ -1,5 +1,20 @@
 {
+  "name": "scaloni-league-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Classifica live proiettata della Scaloni League",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1"
   }
 }
