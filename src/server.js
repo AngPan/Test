@@ -2,7 +2,7 @@ import path from 'node:path';
 import express from 'express';
 import { config } from './config.js';
 import { buildLiveStandings } from './liveStandings.js';
-import { getRoundLineups } from './fantacalcio.js';
+import { getRoundLineups, getFormationsExcel } from './fantacalcio.js';
 
 const app = express();
 const publicDir = path.join(config.root, 'public');
@@ -29,6 +29,19 @@ app.get('/api/live-standings', async (_req, res) => {
 });
 
 app.get('/api/debug-round', async (_req, res) => {
+  try {
+    const xlsx = await getFormationsExcel(6);
+    console.log('FORMATIONS_XLSX_TEST', JSON.stringify({
+      ok: xlsx.ok,
+      status: xlsx.status,
+      contentType: xlsx.contentType,
+      size: xlsx.size,
+      prefix: xlsx.prefix
+    }));
+  } catch (error) {
+    console.error('FORMATIONS_XLSX_FAIL', error instanceof Error ? error.message : String(error));
+  }
+
   try {
     const data = await getRoundLineups({ leagueMatchday: 6, serieAMatchday: 8 });
     const summarize = (value) => {
