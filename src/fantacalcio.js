@@ -20,6 +20,9 @@ function authHeaders({ legacy = false } = {}) {
     headers[config.tokenHeader] = tokenValue;
   }
 
+  if (config.accessToken) headers['Access-Token'] = String(config.accessToken).trim();
+  if (config.platform) headers['Platform'] = String(config.platform).trim();
+
   if (legacy) {
     headers.Referer = `https://leghe.fantacalcio.it/${config.leagueAlias}/view/competition/${config.competitionId}/dashboard`;
     headers['X-Requested-With'] = 'XMLHttpRequest';
