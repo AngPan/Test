@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scaloni League — Accesso</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <div class="brand-mark">S</div><h1>Scaloni League</h1><p>Classifica live</p>
+    <form action="/login" method="post" autocomplete="off">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required autofocus placeholder="••••••••">
+      <button type="submit">Accedi</button>
+      <div class="login-error" id="loginError" hidden>Password errata.</div>
+    </form>
+  </main>
+  <script>if(new URLSearchParams(location.search).has('error'))document.getElementById('loginError').hidden=false;</script>
+</body>
+</html>
