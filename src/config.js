@@ -36,6 +36,8 @@ export const config = {
   fallbackSerieAMatchday: intEnv('CURRENT_SERIE_A_MATCHDAY', 8),
   appKey: process.env.FANTACALCIO_APP_KEY || '',
   leagueToken: process.env.FANTACALCIO_LEAGUE_TOKEN || '',
+  accessToken: process.env.FANTACALCIO_ACCESS_TOKEN || '',
+  platform: process.env.FANTACALCIO_PLATFORM || '',
   appKeyHeader: process.env.FANTACALCIO_APP_KEY_HEADER || 'App-Key',
   tokenHeader: process.env.FANTACALCIO_TOKEN_HEADER || 'Authorization',
   tokenPrefix: process.env.FANTACALCIO_TOKEN_PREFIX ?? 'Bearer',
