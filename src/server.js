@@ -73,6 +73,19 @@ app.get('/health', (_req, res) => res.json({ ok: true }));
 app.listen(config.port, async () => {
   console.log(`Scaloni Live: http://localhost:${config.port}`);
   try {
+    const xlsx = await getFormationsExcel(6);
+    console.log('FORMATIONS_XLSX_TEST', JSON.stringify({
+      ok: xlsx.ok,
+      status: xlsx.status,
+      contentType: xlsx.contentType,
+      size: xlsx.size,
+      prefix: xlsx.prefix
+    }));
+  } catch (error) {
+    console.error('FORMATIONS_XLSX_FAIL', error instanceof Error ? error.message : String(error));
+  }
+
+  try {
     const data = await getRoundLineups({ leagueMatchday: 6, serieAMatchday: 8 });
     const summary = Array.isArray(data)
       ? { type: 'array', length: data.length, firstKeys: data[0] && typeof data[0] === 'object' ? Object.keys(data[0]) : [] }
