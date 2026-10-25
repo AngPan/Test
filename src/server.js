@@ -36,7 +36,8 @@ app.get('/api/debug-round', async (_req, res) => {
       status: xlsx.status,
       contentType: xlsx.contentType,
       size: xlsx.size,
-      prefix: xlsx.prefix
+      prefix: xlsx.prefix,
+      preview: xlsx.preview
     }));
   } catch (error) {
     console.error('FORMATIONS_XLSX_FAIL', error instanceof Error ? error.message : String(error));
