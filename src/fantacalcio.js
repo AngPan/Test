@@ -12,9 +12,11 @@ function authHeaders({ legacy = false } = {}) {
 
   if (config.appKey) headers[config.appKeyHeader] = config.appKey;
   if (config.leagueToken) {
-    const tokenValue = config.tokenPrefix
-      ? `${config.tokenPrefix} ${config.leagueToken}`.trim()
-      : config.leagueToken;
+    const rawToken = String(config.leagueToken).trim();
+    const alreadyPrefixed = /^Bearer\s+/i.test(rawToken);
+    const tokenValue = alreadyPrefixed
+      ? rawToken
+      : (config.tokenPrefix ? `${config.tokenPrefix} ${rawToken}`.trim() : rawToken);
     headers[config.tokenHeader] = tokenValue;
   }
 
